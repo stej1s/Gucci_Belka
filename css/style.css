@@ -1,0 +1,235 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=Space+Mono:wght@400;700&display=swap');
+
+:root {
+    --primary-burgundy: #800020; 
+    --secondary-dark-brown: #4B2E2E; 
+    --accent-orange: #FF8C00; 
+    --accent-green: #228B22; 
+    --light-block-bg: #FFF5E1; 
+    --text-dark: #4B2E2E; 
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: var(--primary-burgundy);
+    color: var(--text-dark);
+}
+
+header {
+    background: var(--secondary-dark-brown);
+    color: var(--light-block-bg);
+    padding: 1.5rem 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 2px solid var(--accent-orange);
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2em;
+    font-weight: 800;
+    text-align: center;
+    color: var(--light-block-bg);
+}
+
+nav {
+    background: var(--secondary-dark-brown);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+nav ul li a {
+    color: var(--light-block-bg);
+    text-decoration: none;
+    font-weight: 600;
+    padding: 18px 30px;
+    display: block;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+nav ul li a:hover {
+    background-color: var(--accent-orange);
+    color: var(--secondary-dark-brown);
+}
+
+main, form, #anchors {
+    background-color: var(--light-block-bg);
+    color: var(--text-dark);
+    padding: 30px;
+    max-width: 1200px;
+    margin: 40px auto;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+main h1, main h2, form h1, form h2, #anchors h1, #anchors h2 {
+    color: var(--text-dark);
+}
+
+main.tracks {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* по 3 в ряд */
+    gap: 30px;
+}
+
+.tracks figure {
+    background: var(--accent-orange);
+    padding: 20px;
+    border: 2px solid var(--secondary-dark-brown);
+    border-radius: 12px;
+    box-shadow: 6px 6px 0px var(--secondary-dark-brown);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.tracks figure:hover {
+    transform: translateY(-8px) translateX(-8px);
+    box-shadow: 10px 10px 0px var(--secondary-dark-brown);
+}
+
+.tracks figure img {
+    max-width: 100%;
+    height: 200px;
+    object-fit: cover;
+    display: block;
+    margin: 0 auto 15px auto;
+    border-radius: 8px;
+    border: 2px solid var(--secondary-dark-brown);
+}
+
+.tracks figcaption {
+    font-family: 'Space Mono', monospace;
+    font-style: normal;
+    font-weight: 700;
+    color: var(--light-block-bg);
+    font-size: 1.1em;
+}
+
+.tracks figcaption h3 {
+    margin-bottom: 10px;
+    color: var(--secondary-dark-brown);
+}
+
+.tracks figcaption a {
+    color: var(--secondary-dark-brown);
+    text-decoration: none;
+    font-weight: 700;
+    transition: color 0.3s ease;
+}
+
+.tracks figcaption a:hover {
+    color: var(--primary-burgundy);
+}
+
+form fieldset {
+    background-color: var(--accent-orange);
+    border: 3px solid var(--secondary-dark-brown);
+    border-radius: 12px;
+    margin-bottom: 30px;
+    padding: 25px;
+    box-shadow: 4px 4px 0px var(--secondary-dark-brown);
+}
+
+form legend {
+    background-color: var(--light-block-bg);
+    border: 2px solid var(--secondary-dark-brown);
+    border-radius: 8px;
+    font-family: 'Space Mono', monospace;
+    font-weight: 700;
+    font-size: 1.5em;
+    padding: 0 15px;
+    color: var(--text-dark);
+    margin-left: -15px;
+}
+
+form div {
+    margin-bottom: 25px;
+}
+
+label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: 600;
+    color: var(--text-dark);
+    font-size: 1.1em;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="date"],
+input[type="color"],
+input[type="range"],
+select,
+textarea {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid var(--secondary-dark-brown);
+    border-radius: 6px;
+    box-sizing: border-box;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    font-family: 'Inter', sans-serif;
+    font-size: 1em;
+    background-color: var(--light-block-bg);
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    outline: none;
+    border-color: var(--accent-orange);
+    box-shadow: 3px 3px 0px var(--accent-orange);
+}
+
+input[type="submit"],
+input[type="reset"] {
+    background-color: var(--accent-orange);
+    color: var(--text-dark);
+    border: 2px solid var(--secondary-dark-brown);
+    padding: 15px 30px;
+    cursor: pointer;
+    border-radius: 8px;
+    font-size: 1.2em;
+    font-weight: 700;
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
+    box-shadow: 4px 4px 0px var(--secondary-dark-brown);
+    margin-right: 15px;
+}
+
+input[type="submit"]:hover,
+input[type="reset"]:hover {
+    background-color: var(--primary-burgundy);
+    color: var(--light-block-bg);
+    transform: translateY(-2px) translateX(-2px);
+    box-shadow: 6px 6px 0px var(--secondary-dark-brown);
+}
+
+#anchors ul {
+    list-style: square;
+    padding-left: 20px;
+}
+
+#anchors ul li a {
+    color: var(--accent-orange);
+    text-decoration: underline;
+    font-weight: 600;
+}
+
+#anchors ul li a:hover {
+    color: var(--text-dark);
+    text-decoration: none;
+}
+
+

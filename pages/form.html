@@ -3,58 +3,85 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Сторінка форми</title>
-    <link rel="stylesheet" href="../style.css">
+    <title>Складна форма</title>
+    <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
     <header>
-        <h1>Заповніть форму</h1>
+        <h1>Форма зворотного зв'язку</h1>
     </header>
     <nav>
         <ul>
-            <li><a href="index.html">Головна</a></li>
-            <li><a href="form.html">Форма</a></li>
+            <li><a href="../index.html">Головна</a></li>
             <li><a href="gallery.html">Галерея</a></li>
+            <li><a href="form.html">Форма</a></li>
             <li><a href="anchors.html">Якорі</a></li>
         </ul>
     </nav>
     <main>
-        <p>Будь ласка, заповніть цю форму, щоб ми могли зв'язатися з вами. Ми зібрали тут різноманітні поля, щоб продемонструвати можливості тегів, які ми вивчили, включно з текстовими полями, вибором опцій та коментарями. Усі поля з позначкою * обов'язкові до заповнення.</p>
         <form action="#" method="post">
             <fieldset>
-                <legend>Особиста інформація</legend>
-                <label for="name">Ім'я:</label>
-                <input type="text" id="name" name="name" required>
-                <label for="email">Електронна пошта:</label>
-                <input type="email" id="email" name="email" required>
-                <label for="password">Пароль:</label>
-                <input type="password" id="password" name="password" minlength="8" required>
-                <label for="dob">Дата народження:</label>
-                <input type="date" id="dob" name="dob">
+                <legend>Особисті дані</legend>
+                <div>
+                    <label for="name">Ім'я:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div>
+                    <label for="email">Електронна пошта:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div>
+                    <label for="phone">Номер телефону:</label>
+                    <input type="tel" id="phone" name="phone" pattern="[0-9]{3}-[0-9]{2}-[0-9]{2}" placeholder="099-12-34-56" required>
+                </div>
             </fieldset>
+
             <fieldset>
-                <legend>Деталі замовлення</legend>
-                <label for="product">Оберіть продукт:</label>
-                <select id="product" name="product">
-                    <option value="product1">Продукт 1</option>
-                    <option value="product2">Продукт 2</option>
-                </select>
-                <label>Спосіб доставки:</label>
-                <input type="radio" id="delivery_courier" name="delivery" value="courier" checked>
-                <label for="delivery_courier">Кур'єр</label>
-                <input type="radio" id="delivery_post" name="delivery" value="post">
-                <label for="delivery_post">Пошта</label>
-                <label for="comment">Коментар:</label>
-                <textarea id="comment" name="comment" rows="4"></textarea>
-                <input type="checkbox" id="newsletter" name="newsletter" value="yes">
-                <label for="newsletter">Підписатися на розсилку</label>
+                <legend>Ваші уподобання</legend>
+                <div>
+                    <label for="date">Дата народження:</label>
+                    <input type="date" id="date" name="date">
+                </div>
+                <div>
+                    <label for="color">Улюблений колір:</label>
+                    <input type="color" id="color" name="color">
+                </div>
+                <div>
+                    <label for="range">Рівень задоволення:</label>
+                    <input type="range" id="range" name="range" min="0" max="10" step="1" value="5">
+                </div>
             </fieldset>
-            <input type="submit" value="Відправити">
-            <input type="reset" value="Скинути">
+
+            <fieldset>
+                <legend>Вибір та коментарі</legend>
+                <div>
+                    <label for="gender">Стать:</label>
+                    <select id="gender" name="gender">
+                        <option value="male">Чоловік</option>
+                        <option value="female">Жінка</option>
+                        <option value="other">Інше</option>
+                    </select>
+                </div>
+                <div>
+                    <p>Оберіть улюблені хобі:</p>
+                    <input type="checkbox" id="hobby1" name="hobby1" value="reading">
+                    <label for="hobby1">Читання</label><br>
+                    <input type="checkbox" id="hobby2" name="hobby2" value="hiking">
+                    <label for="hobby2">Походи</label><br>
+                    <input type="checkbox" id="hobby3" name="hobby3" value="cooking">
+                    <label for="hobby3">Кулінарія</label>
+                </div>
+                <div>
+                    <label for="comment">Коментар:</label>
+                    <textarea id="comment" name="comment" rows="5" cols="40"></textarea>
+                </div>
+            </fieldset>
+
+            <div>
+                <input type="submit" value="Відправити">
+                <input type="reset" value="Скинути">
+            </div>
         </form>
     </main>
-    <footer>
-        <p>&copy; 2025 Всі права захищено.</p>
-    </footer>
 </body>
 </html>
