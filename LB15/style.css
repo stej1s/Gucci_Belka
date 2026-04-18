@@ -1,0 +1,182 @@
+/* Базові налаштування */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Arial", sans-serif;
+  margin: 0;
+  background-color: #f0f2f5;
+  color: #333;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.container {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 20px;
+}
+
+/* Header & Footer */
+.main-header {
+  background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+  color: white;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.cta-btn {
+  background: #ffc107;
+  border: none;
+  padding: 12px 25px;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 30px;
+  transition: 0.3s;
+}
+
+.cta-btn:hover {
+  transform: scale(1.05);
+  background: #e0ac08;
+}
+
+.main-footer {
+  margin-top: auto;
+  background: #222;
+  color: #888;
+  text-align: center;
+  padding: 20px;
+}
+
+/* Tabs */
+.tabs-section {
+  background: white;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+.tabs-header {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  border-bottom: 2px solid #eee;
+  margin-bottom: 20px;
+}
+
+.tab-btn {
+  padding: 10px 20px;
+  border: none;
+  background: none;
+  cursor: pointer;
+  font-size: 16px;
+  color: #777;
+  transition: 0.3s;
+}
+
+.tab-btn.active {
+  color: #2a5298;
+  border-bottom: 3px solid #2a5298;
+  font-weight: bold;
+}
+
+.tab-content {
+  display: none;
+  animation: fadeIn 0.4s ease-out;
+}
+
+.tab-content.active {
+  display: block;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Modal & Form Validation */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-overlay.open {
+  display: flex;
+}
+
+.modal-window {
+  background: white;
+  padding: 30px;
+  border-radius: 15px;
+  width: 350px;
+  position: relative;
+}
+
+.close-modal {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 25px;
+  cursor: pointer;
+}
+
+.input-group {
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+/* Стилі для валідації */
+input.invalid {
+  border-color: #dc3545;
+  background: #fff8f8;
+}
+
+.error-text {
+  color: #dc3545;
+  font-size: 12px;
+  display: none;
+  margin-top: 5px;
+}
+
+input.invalid + .error-text {
+  display: block;
+}
+
+.submit-btn {
+  width: 100%;
+  padding: 12px;
+  background: #28a745;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}

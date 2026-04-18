@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Лабораторна робота №15 - Фінальний проєкт</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="site-body">
+
+  <header class="main-header">
+    <div class="header-content">
+      <h1>Frontend Development</h1>
+      <button id="open-modal-btn" class="cta-btn">Зв'язатися зі мною</button>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="tabs-section">
+      <h2 class="text-center">Деталі навчання</h2>
+      <div class="tabs-header">
+        <button class="tab-btn active" data-tab="desc">
+          <i class="fa-solid fa-circle-info"></i> Опис
+        </button>
+        <button class="tab-btn" data-tab="tech">
+          <i class="fa-solid fa-gear"></i> Стек
+        </button>
+        <button class="tab-btn" data-tab="status">
+          <i class="fa-solid fa-check-double"></i> Статус
+        </button>
+      </div>
+
+      <div class="tabs-body">
+        <div id="desc" class="tab-content active">
+          <h3>Про курс</h3>
+          <p>Протягом семестру ми вивчили шлях від базової розмітки до створення складних динамічних елементів. Цей сайт — демонстрація фінальних
+            навичок.</p>
+        </div>
+        <div id="tech" class="tab-content">
+          <h3>Технології</h3>
+          <ul class="tech-list">
+            <li><strong>HTML5:</strong> Семантична розмітка</li>
+            <li><strong>CSS3:</strong> Flexbox, Animations, Grid</li>
+            <li><strong>JS:</strong> DOM-маніпуляції та валідація</li>
+          </ul>
+        </div>
+        <div id="status" class="tab-content">
+          <h3>Результат</h3>
+          <p>Сайт успішно адаптований під мобільні пристрої та розміщений на хостингу GitHub Pages.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div class="modal-overlay" id="my-modal">
+    <div class="modal-window">
+      <span class="close-modal">&times;</span>
+      <h2>Зворотний зв'язок</h2>
+      <p class="modal-subtitle">Ми зателефонуємо вам протягом 15 хвилин</p>
+
+      <form id="contact-form" novalidate>
+        <div class="input-group">
+          <label for="user-name">Ваше ім'я</label>
+          <input type="text" id="user-name" placeholder="Введіть ім'я" required>
+          <span class="error-text">Ім'я має містити мінімум 2 символи</span>
+        </div>
+
+        <div class="input-group">
+          <label for="user-phone">Номер телефону</label>
+          <input type="tel" id="user-phone" placeholder="0991234567" required>
+          <span class="error-text">Введіть коректний номер (10 цифр)</span>
+        </div>
+
+        <button type="submit" class="submit-btn">Відправити заявку</button>
+      </form>
+    </div>
+  </div>
+
+  <footer class="main-footer">
+    <p>&copy; 2026 Лабораторна робота №15. Виконав: [Твоє Прізвище]</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
