@@ -1,0 +1,57 @@
+body {
+  font-family: Arial;
+  margin: 0;
+  padding: 20px;
+}
+
+/* ===== GRID ===== */
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-auto-rows: minmax(200px, auto);
+  gap: 15px;
+  max-width: 1200px;
+  margin: 30px auto;
+}
+
+.gallery-item {
+  border-radius: 10px;
+  overflow: hidden;
+  user-select: none;
+  pointer-events: none;
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Розміщення */
+.item-1 {
+  grid-column: span 2;
+  grid-row: span 2;
+}
+
+.item-2 {
+  grid-column: span 2;
+}
+
+/* ===== SWIPER ===== */
+
+.swiper {
+  width: 100%;
+  height: 400px;
+  max-width: 1200px;
+  margin: 50px auto;
+}
+
+.swiper-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+  background: #eee;
+  border-radius: 10px;
+}

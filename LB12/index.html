@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Lab 12 - Grid + Swiper</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <h2>Галерея (CSS Grid)</h2>
+
+  <section class="gallery">
+    <div class="gallery-item item-1">
+      <img src="img/01.jpg" alt="Image 1">
+    </div>
+    <div class="gallery-item item-2">
+      <img src="img/02.jpg" alt="Image 2">
+    </div>
+    <div class="gallery-item item-3">
+      <img src="img/03.jpg" alt="Image 3">
+    </div>
+    <div class="gallery-item item-4">
+      <img src="img/04.jfif" alt="Image 4">
+    </div>
+    <div class="gallery-item item-5">
+      <img src="img/05.jpg" alt="Image 5">
+    </div>
+  </section>
+
+  <h2>Слайдер (Swiper.js)</h2>
+
+  <div class="swiper mySwiper">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide">Слайд 1</div>
+      <div class="swiper-slide">Слайд 2</div>
+      <div class="swiper-slide">Слайд 3</div>
+      <div class="swiper-slide">Слайд 4</div>
+    </div>
+
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-pagination"></div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script src="script.js"></script>
+</body>
+
+</html>
