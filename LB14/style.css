@@ -1,0 +1,13 @@
+/* ===== SVG ===== */
+
+.my-svg-icon {
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.my-svg-icon:hover circle {
+  fill: #dc3545;
+  stroke: #dc3545;
+  transform: scale(1.1);
+  transform-origin: center;
+}
