@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Lab 13</title>
+
+  <!-- Swiper -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <header>
+    <!-- Гамбургер -->
+    <button class="hamburger">
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
+    </button>
+
+    <!-- Мобільне меню -->
+    <nav class="mobile-menu">
+      <a href="#">Головна</a>
+      <a href="#">Послуги</a>
+      <a href="#">Контакти</a>
+    </nav>
+  </header>
+
+  <!-- Scroll down -->
+  <div class="scroll-down">
+    <span>↓</span>
+  </div>
+
+  <!-- Swiper -->
+  <div class="swiper mySwiper">
+    <div class="swiper-wrapper">
+
+      <div class="swiper-slide"
+        style="background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=1920&q=80');">
+        <div class="slide-content">
+          <span class="slide-subtitle">Майбутнє вже тут</span>
+          <h2>Сучасна Веб-Розробка</h2>
+          <p>Створюємо швидкі та адаптивні інтерфейси за допомогою передових технологій HTML5, CSS3 та JavaScript.</p>
+          <a href="#" class="btn-slide">Детальніше</a>
+        </div>
+      </div>
+
+      <div class="swiper-slide"
+        style="background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://images.unsplash.com/photo-1558655146-d09347e92766?auto=format&fit=crop&w=1920&q=80');">
+        <div class="slide-content">
+          <span class="slide-subtitle">Естетика та функціонал</span>
+          <h2>Інтуїтивний UI/UX Дизайн</h2>
+          <p>Кожен піксель має значення. Ми проектуємо інтерфейси, які закохують користувачів з першого погляду.</p>
+          <a href="#" class="btn-slide">Наші роботи</a>
+        </div>
+      </div>
+
+      <div class="swiper-slide"
+        style="background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=1920&q=80');">
+        <div class="slide-content">
+          <span class="slide-subtitle">Разом до мети</span>
+          <h2>Професійна Команда</h2>
+          <p>Об'єднуємо зусилля дизайнерів та розробників для досягнення найкращих результатів у ваших проектах.</p>
+          <a href="#" class="btn-slide">Зв'язатися</a>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-pagination"></div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script src="script.js"></script>
+
+</body>
+
+</html>
